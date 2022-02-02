@@ -22,6 +22,7 @@ pipeline {
                  script {
                  sh '''
                    docker stop $IMAGE_NAME || true
+                   docker rmi -f cfreijanes/$IMAGE_NAME || true
                    docker rm -f $IMAGE_NAME || true
                    docker run --name $IMAGE_NAME -d -p 23423:23423 -p 8080:8080 -p 1900:1900 -v /etc/localtime:/etc/localtime:ro cfreijanes/$IMAGE_NAME:$IMAGE_TAG
                    sleep 180
