@@ -42,7 +42,7 @@ pipeline {
        stage('Push on Dockerhub') {
           agent any
           environment {
-              DOKERHUB_CREDENTIALS = credentials('dockerhub_cfreijanes')
+              DOCKERHUB_CREDENTIALS = credentials('dockerhub_cfreijanes')
           } 
           steps {
              script {
