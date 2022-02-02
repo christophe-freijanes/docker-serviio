@@ -4,7 +4,7 @@ pipeline {
        IMAGE_TAG = "latest"
        STAGING = "serviio-staging"
        PRODUCTION = "serviio-production"
-       PRODUCTION_IP_HOST = "18.204.42.23"
+       PRODUCTION_IP_HOST = "44.198.193.35"
      }
      agent none
      stages {
