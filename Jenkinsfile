@@ -23,7 +23,7 @@ pipeline {
                  sh '''
                    docker stop $IMAGE_NAME || true
                    docker rm -f $IMAGE_NAME || true
-                   docker run --name $IMAGE_NAME -d -p 23423:23423 -p 8080:8080 -p 1900:1900 cfreijanes/$IMAGE_NAME:$IMAGE_TAG
+                   docker run --name $IMAGE_NAME -d -p 23423:23423 -p 8080:8080 -p 1900:1900 -v /etc/localtime:/etc/localtime:ro cfreijanes/$IMAGE_NAME:$IMAGE_TAG
                    sleep 180
                  '''
                }
@@ -34,7 +34,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                   curl http://172.17.0.1:23423/console/#/app/welcome/ | grep "serviio"
+                   curl http://localhost:23423/console/#/app/welcome/ | grep "serviio"
                 '''
               }
            }
@@ -106,7 +106,7 @@ pipeline {
               ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker stop $IMAGE_NAME  || true
               ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker rm $IMAGE_NAME  || true
               ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker rmi cfreijanes/$IMAGE_NAME:$IMAGE_TAG  || true
-              ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker run --name $IMAGE_NAME -d -p 23423:23423 -p 8080:8080 -p 1900:1900 cfreijanes/$IMAGE_NAME:$IMAGE_TAG  || true
+              ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker run --name $IMAGE_NAME -d -p 23423:23423 -p 8080:8080 -p 1900:1900 -v /etc/localtime:/etc/localtime:ro cfreijanes/$IMAGE_NAME:$IMAGE_TAG  || true
             '''
              }
            }
@@ -143,6 +143,14 @@ pipeline {
                     }
                 }
             }
-        } 
+        }
+        post {
+             success {
+               slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+               }
+             failure {
+               slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+               }   
+    }
  }
 }
