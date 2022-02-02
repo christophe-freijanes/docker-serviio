@@ -31,7 +31,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y curl ffmpeg net-t
 VOLUME ["/opt/serviio/config", "/opt/serviio/library",  "/opt/serviio/log", "/opt/serviio/plugins", "/media/serviio"]
 
 EXPOSE 1900/udp
-EXPOSE 8895/tcp
+EXPOSE 8081/tcp
 # HTTP/1.1 /console /rest
 EXPOSE 23423/tcp
 # HTTPS/1.1 /console /rest
