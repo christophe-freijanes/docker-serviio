@@ -10,13 +10,10 @@ Link on docker hub: [christophe-freijanes/serviio](https://hub.docker.com/r/cfre
 Link on github: [christophe-freijanes/docker-serviio](https://github.com/christophe-freijanes/docker-serviio)
 
 ### Build Args
-
  - `VERSION` = 2.2 - serviio version
  - `FFMPEG_VERSION` = 4.2
 
-
 ### Exposed Ports
-
  - `1900:1900/udp`
  - `8895:8895/tcp`
  - `23423:23423/tcp` - HTTP/1.1 /console /rest
