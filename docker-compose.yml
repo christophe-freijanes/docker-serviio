@@ -5,7 +5,7 @@ services:
     image: cfreijanes/docker-serviio:latest
     ports:
      - "23423:23423/tcp"
-     - "8895:8895/tcp"
+     - "8081:8081/tcp"
      - "1900:1900/udp"
     volumes:
      - /srv/docker/serviio/library:/opt/serviio/library
