@@ -39,15 +39,19 @@ pipeline {
               }
            }
        }
-       stage('Push image to registry Dockerhub') {
-       /* Finally, we'll push the image with two tags:
-       * First, the incremental build number from Jenkins
-       * Second, the 'latest' tag. */
-       withCredentials([usernamePassword( credentialsId: 'dockerhub_cfreijanes', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-       docker.withRegistry('', 'dockerhub_cfreijanes') {
-       sh "docker login -u ${USERNAME} -p ${PASSWORD}"
-       cfreijanes/$IMAGE_NAME.push("${env.BUILD_NUMBER}")
-       cfreijanes/$IMAGE_NAME.push("latest")
+       stage('Push on Dockerhub') {
+          agent any
+          environment {
+               PASSWORD = credentials('dockerhub_cfreijanes')
+          } 
+          steps {
+             script {
+               sh '''
+                 docker login -u cfreijanes -p $PASSWORD
+                 docker push cfreijanes/$IMAGE_NAME:$IMAGE_TAG
+               '''
+              }
+          }
        } 
        stage('Clean Container') {
           agent any
@@ -140,12 +144,13 @@ pipeline {
                 }
             }
         }
-    }
-            post {
+        post {
              success {
                slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                }
              failure {
                slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-               }  
+               }   
+    }
+ }
 }
