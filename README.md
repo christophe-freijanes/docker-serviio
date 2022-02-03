@@ -3,7 +3,7 @@ Fastest and Smallest Docker Container for Serviio DLNA Server
 
 [![](http://serviio.org/images/serviio.png)](http://serviio.org/) 
 
-[![](https://images.microbadger.com/badges/image/cfreijanes/serviio.svg)](https://microbadger.com/images/cfreijanes/serviio) [![Docker Pulls](https://img.shields.io/docker/pulls/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![Docker Stars](https://img.shields.io/docker/stars/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![GitHub last commit](https://img.shields.io/github/last-commit/christophe-freijanes/docker-serviio.svg)](https://github.com/christophe-freijanes/docker-serviio) [![Docker Build Status](https://img.shields.io/docker/build/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![Build Status](http://ec2-18-213-113-184.compute-1.amazonaws.com:8080/buildStatus/icon?job=build-docker-serviio)](http://ec2-18-213-113-184.compute-1.amazonaws.com:8080/job/build-docker-serviio/)
+[![](https://images.microbadger.com/badges/image/cfreijanes/serviio.svg)](https://microbadger.com/images/cfreijanes/serviio) [![Docker Pulls](https://img.shields.io/docker/pulls/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![Docker Stars](https://img.shields.io/docker/stars/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![GitHub last commit](https://img.shields.io/github/last-commit/christophe-freijanes/docker-serviio.svg)](https://github.com/christophe-freijanes/docker-serviio) [![Docker Build Status](https://img.shields.io/docker/build/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![Build Status](http://ec2-3-92-19-16.compute-1.amazonaws.com:8080/buildStatus/icon?job=build-docker-serviio)](http://ec2-3-92-19-16.compute-1.amazonaws.com:8080/job/build-docker-serviio/)
   
 Link on docker hub: [christophe-freijanes/serviio](https://hub.docker.com/r/cfreijanes/serviio/)
 
@@ -15,7 +15,7 @@ Link on github: [christophe-freijanes/docker-serviio](https://github.com/christo
 
 ### Exposed Ports
  - `1900:1900/udp`
- - `8895:8895/tcp`
+ - `8080:8081/tcp`
  - `23423:23423/tcp` - HTTP/1.1 /console /rest
  - `23523:23523/tcp` - HTTPS/1.1 /console /rest
  - `23424:23424/tcp` - HTTP/1.1 /cds /mediabrowser
