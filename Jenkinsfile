@@ -115,7 +115,7 @@ pipeline {
                               ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker stop $IMAGE_NAME  || true
                               ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker rm $IMAGE_NAME  || true
                               ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker rmi cfreijanes/$IMAGE_NAME:$IMAGE_TAG  || true
-                              ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker run --name $IMAGE_NAME -d -p 23423:23423 -p 8081:8081 -p 1900:1900 cfreijanes/$IMAGE_NAME:$IMAGE_TAG  || true
+                              ssh -o StrictHostKeyChecking=no -i ${keyfile} ${NUSER}@${PRODUCTION_IP_HOST} docker run --name $IMAGE_NAME -d -p 23423:23423 -p 8081:8081 -p 1900:1900 -v /etc/localtime:/etc/localtime:ro cfreijanes/$IMAGE_NAME:$IMAGE_TAG  || true
                             '''
                         }
                     }
