@@ -3,7 +3,7 @@ Fastest and Smallest Docker Container for Serviio DLNA Server
 
 [![](http://serviio.org/images/serviio.png)](http://serviio.org/) 
 
-[![](https://images.microbadger.com/badges/image/cfreijanes/serviio.svg)](https://microbadger.com/images/cfreijanes/serviio) [![Docker Pulls](https://img.shields.io/docker/pulls/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![Docker Stars](https://img.shields.io/docker/stars/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![GitHub last commit](https://img.shields.io/github/last-commit/christophe-freijanes/docker-serviio.svg)](https://github.com/christophe-freijanes/docker-serviio) [![Docker Build Status](https://img.shields.io/docker/build/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![Build Status](http://ec2-44-200-127-81.compute-1.amazonaws.com:8080/buildStatus/icon?job=build-docker-serviio)](http://ec2-44-200-127-81.compute-1.amazonaws.com:8080/job/build-docker-serviio/)
+[![](https://images.microbadger.com/badges/image/cfreijanes/serviio.svg)](https://microbadger.com/images/cfreijanes/serviio) [![Docker Pulls](https://img.shields.io/docker/pulls/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![Docker Stars](https://img.shields.io/docker/stars/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![GitHub last commit](https://img.shields.io/github/last-commit/christophe-freijanes/docker-serviio.svg)](https://github.com/christophe-freijanes/docker-serviio) [![Docker Build Status](https://img.shields.io/docker/build/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/)
   
 Link on docker hub: [christophe-freijanes/serviio](https://hub.docker.com/r/cfreijanes/serviio/)
 
