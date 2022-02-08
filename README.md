@@ -28,7 +28,6 @@ Link on github: [christophe-freijanes/docker-serviio](https://github.com/christo
  - `/opt/serviio/log`
  - `/media/serviio` - put media content here and add in serviio gui this path
 
-
 ### Container Changelog (dd.mm.yy)
  - **01.10.2021** - Update Serviio version to 2.2
  - **19.03.2021** - Update FFMPEG to 4.3.2, add healthcheck (PR #19), cleanup volumes (mount only if you need it)
