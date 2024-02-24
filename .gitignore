@@ -21,3 +21,6 @@ letsencrypt/
 # Ignore les fichiers spécifiques au système d'exploitation
 .DS_Store
 Thumbs.db
+
+# Ignore les fichiers de configuration VSCode
+.vscode/

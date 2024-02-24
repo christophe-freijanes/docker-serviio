@@ -9,7 +9,7 @@ Link on docker hub: [christophe-freijanes/serviio](https://hub.docker.com/r/cfre
 
 Link on github: [christophe-freijanes/docker-serviio](https://github.com/christophe-freijanes/docker-serviio)
 
-### Build Args
+### Build Arguments
  - `VERSION` = 2.2 - serviio version
  - `FFMPEG_VERSION` = 4.2
 
