@@ -1,0 +1,23 @@
+# Ignore les fichiers de configuration spécifiques aux utilisateurs
+docker-compose.override.yml
+docker-compose.yml
+
+# Ignore les fichiers secrets
+secrets*
+
+# Ignore les fichiers de données
+data/
+
+# Ignore les certificats SSL
+letsencrypt/
+
+# Ignore les fichiers générés par Docker
+*.log
+*.pid
+*.sock
+*.swo
+*.swp
+
+# Ignore les fichiers spécifiques au système d'exploitation
+.DS_Store
+Thumbs.db
