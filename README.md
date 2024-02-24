@@ -21,12 +21,12 @@ Link on github: [christophe-freijanes/docker-serviio](https://github.com/christo
  - `23424:23424/tcp` - HTTP/1.1 /cds /mediabrowser
  - `23524:23524/tcp` - HTTPS/1.1 /cds /mediabrowser
 
-### Recomended Volumes (no auto mounting now)
+### Recommended Volumes (no auto mounting now)
  - `/opt/serviio/config`
  - `/opt/serviio/library`
  - `/opt/serviio/plugins`
  - `/opt/serviio/log`
- - `/media/serviio` - put media content here and add in serviio gui this path
+ - `/media/serviio` - Put media content here and add in serviio gui this path
 
 ### Container Changelog (dd.mm.yy)
  - **01.10.2021** - Update Serviio version to 2.2
