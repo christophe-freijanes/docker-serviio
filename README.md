@@ -1,19 +1,16 @@
 # docker-serviio
-Fastest and Smallest Docker Container for Serviio DLNA Server
+Conteneur Docker pour le serveur multimédia Serviio DLNA.
 
-[![](http://serviio.org/images/serviio.png)](http://serviio.org/) 
 
-[![](https://images.microbadger.com/badges/image/cfreijanes/serviio.svg)](https://microbadger.com/images/cfreijanes/serviio) [![Docker Pulls](https://img.shields.io/docker/pulls/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![Docker Stars](https://img.shields.io/docker/stars/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/) [![GitHub last commit](https://img.shields.io/github/last-commit/christophe-freijanes/docker-serviio.svg)](https://github.com/christophe-freijanes/docker-serviio) [![Docker Build Status](https://img.shields.io/docker/build/cfreijanes/serviio.svg)](https://hub.docker.com/r/cfreijanes/serviio/)
   
-Link on docker hub: [christophe-freijanes/serviio](https://hub.docker.com/r/cfreijanes/serviio/)
+Image Docker : [christophe-freijanes/serviio](https://hub.docker.com/r/cfreijanes/serviio/)
 
-Link on github: [christophe-freijanes/docker-serviio](https://github.com/christophe-freijanes/docker-serviio)
 
-### Build Arguments
+## Paramètres de construction
  - `VERSION` = 2.2 - serviio version
  - `FFMPEG_VERSION` = 4.2
 
-### Exposed Ports
+## Ports exposés
  - `1900:1900/udp`
  - `8080:8081/tcp`
  - `23423:23423/tcp` - HTTP/1.1 /console /rest
@@ -21,14 +18,14 @@ Link on github: [christophe-freijanes/docker-serviio](https://github.com/christo
  - `23424:23424/tcp` - HTTP/1.1 /cds /mediabrowser
  - `23524:23524/tcp` - HTTPS/1.1 /cds /mediabrowser
 
-### Recommended Volumes (no auto mounting now)
+## Volumes recommandés
  - `/opt/serviio/config`
  - `/opt/serviio/library`
  - `/opt/serviio/plugins`
  - `/opt/serviio/log`
  - `/media/serviio` - Put media content here and add in serviio gui this path
 
-### Container Changelog (dd.mm.yy)
+## Historique des modifications
  - **01.10.2021** - Update Serviio version to 2.2
  - **19.03.2021** - Update FFMPEG to 4.3.2, add healthcheck (PR #19), cleanup volumes (mount only if you need it)
  - **07.12.2020** - Update alpine to 3.12, fix dcraw.c build (add jasper build from source), removed config volume
